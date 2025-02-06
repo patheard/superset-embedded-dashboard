@@ -1,0 +1,14 @@
+{
+    "name": "superset-embedded-dashboard",
+    "version": "1.0.0",
+    "description": "Example of how to embed a Superset dashboard",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js"
+    },
+    "dependencies": {
+      "express": "^4.21.2",
+      "jsonwebtoken": "^9.0.2",
+      "dotenv": "^16.4.7"
+    }
+  }
