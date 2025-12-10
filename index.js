@@ -18,9 +18,9 @@ app.get('/api/guest-token', (req, res) => {
         },
       ],
       user: {
-        username: "",
-        first_name: "",
-        last_name: "",
+        username: "guest_user",
+        first_name: "guest",
+        last_name: "user",
       },
       aud: "superset",
       type: "guest",
@@ -28,7 +28,7 @@ app.get('/api/guest-token', (req, res) => {
     },
     process.env.GUEST_TOKEN_JWT_SECRET,
     {
-      expiresIn: '1h',
+      expiresIn: '5m',
     }
   );
   res.json({ token: guestToken, dashboardId: process.env.SUPERSET_DASHBOARD_ID });
